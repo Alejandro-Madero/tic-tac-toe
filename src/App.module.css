@@ -1,0 +1,31 @@
+.game-container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.game-container h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+}
+
+.board-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  /* gap: 0.3rem; */
+}
+
+@media (max-width: 500px) {
+  .game-container {
+    width: 90%;
+  }
+
+  .board-container {
+    width: 100%;
+  }
+}
