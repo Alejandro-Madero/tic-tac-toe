@@ -30,3 +30,20 @@
 .bottom {
   border-bottom: none;
 }
+
+.is-winner {
+  background-color: rgba(112, 112, 112, 1);
+  animation: 1s winner ease-in forwards;
+}
+
+@keyframes winner {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -12,11 +12,14 @@ const squareBorders = new Map([
   [8, [styles.right, styles.bottom]],
 ]);
 
-const Square = ({ children, onClick, index }) => {
+const Square = ({ children, onClick, index, isWinner }) => {
+  const winner = isWinner?.includes(index) ? "is-winner" : "";
   const handleClick = () => onClick(index);
   return (
     <div
-      className={`${styles.square} ${squareBorders.get(index).join(" ")}`}
+      className={`${styles.square} ${
+        squareBorders.get(index)?.join(" ") || ""
+      } ${styles[winner]}`}
       onClick={handleClick}
     >
       {children}
