@@ -1,7 +1,6 @@
 .modal {
   width: 50%;
   max-width: 600px;
-  height: 50%;
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 15px;
   display: flex;
@@ -12,7 +11,7 @@
 
 .modal header {
   padding: 1rem;
-  background-color: #ccc;
+  background-color: rgba(230, 230, 230, 0.85);
   color: #333;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
