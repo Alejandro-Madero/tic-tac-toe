@@ -30,8 +30,22 @@
   border-bottom: none;
 }
 
+.top-left {
+  border-top-left-radius: 15px;
+}
+.top-right {
+  border-top-right-radius: 15px;
+}
+.bottom-left {
+  border-bottom-left-radius: 15px;
+}
+.bottom-right {
+  border-bottom-right-radius: 15px;
+}
+
 .is-winner {
-  background-color: rgba(112, 112, 112, 1);
+  background-color: rgba(112, 112, 112, 0.75);
+
   animation: 0.5s winner ease-in forwards;
 }
 

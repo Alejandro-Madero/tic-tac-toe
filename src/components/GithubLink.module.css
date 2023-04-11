@@ -12,3 +12,10 @@
 .logo:hover {
   transform: translate(-15%, -15%) rotate(135deg);
 }
+
+@media (max-width: 500px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+}

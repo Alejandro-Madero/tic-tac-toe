@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import confetti from "canvas-confetti";
 import {
   initialBoard,
   TURNS,
   checkWinner,
   isGameFinished,
 } from "./utils/gameLogic";
+import { confettiOptions } from "./utils/confettiOptions";
 import CurrentTurn from "./components/CurrentTurn";
 import PlayerX from "./components/PlayerX";
 import PlayerO from "./components/PlayerO";
@@ -65,10 +67,15 @@ const App = () => {
 
   const handleCloseModal = () => setShowModal(false);
 
+  useEffect(() => {
+    if (!winner) return;
+    confetti(confettiOptions());
+  }, [winner]);
+
   return (
     <main className={styles["game-container"]}>
       <GithubLink />
-      <h1>Tic-Tac-Toe</h1>
+
       <CurrentTurn turn={currentTurn} />
       <section className={styles["board-container"]}>
         {board.map((el, i) => {

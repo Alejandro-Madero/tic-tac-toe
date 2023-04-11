@@ -7,12 +7,12 @@
   flex-direction: column;
 }
 
-.game-container h1 {
+/* .game-container h1 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 4rem;
   font-weight: 400;
-}
+} */
 
 .board-container {
   display: grid;

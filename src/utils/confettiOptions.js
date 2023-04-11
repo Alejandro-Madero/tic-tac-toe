@@ -1,0 +1,49 @@
+export const confettiOptions = () => {
+  const screenWidth = window.innerWidth;
+  const device =
+    screenWidth > 769
+      ? "large"
+      : screenWidth < 769 && screenWidth > 500
+      ? "medium"
+      : "small";
+
+  const optionsMap = new Map([
+    [
+      "small",
+      {
+        particleCount: 100,
+        spread: 60,
+        gravity: 0.9,
+        ticks: 280,
+        origin: { y: 0.4 },
+        disableForReducedMotion: true,
+        scalar: 0.8,
+      },
+    ],
+    [
+      "medium",
+      {
+        particleCount: 100,
+        spread: 120,
+        gravity: 0.8,
+        ticks: 280,
+        origin: { y: 0.4 },
+        disableForReducedMotion: true,
+        scalar: 0.9,
+      },
+    ],
+    [
+      "large",
+      {
+        particleCount: 120,
+        spread: 180,
+        gravity: 0.8,
+        ticks: 280,
+        origin: { y: 0.4 },
+        disableForReducedMotion: true,
+      },
+    ],
+  ]);
+
+  return optionsMap.get(device);
+};
