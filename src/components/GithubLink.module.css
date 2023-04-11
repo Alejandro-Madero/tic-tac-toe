@@ -13,9 +13,14 @@
   transform: translate(-15%, -15%) rotate(135deg);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    transform: translate(-20%, -12%) rotate(145deg);
+  }
+
+  .logo:hover {
+    transform: translate(-20%, -12%) scale(1.1) rotate(145deg);
   }
 }
