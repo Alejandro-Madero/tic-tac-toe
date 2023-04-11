@@ -26,5 +26,9 @@ export const checkWinner = (board, turn) => {
     return combination;
   }
 
-  return false;
+  return null;
+};
+
+export const isGameFinished = (board) => {
+  return board.every((el) => el !== null);
 };

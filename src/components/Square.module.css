@@ -5,14 +5,14 @@
   border: 4px solid #ccc;
   display: grid;
   place-items: center;
-  font-size: 4rem;
+  font-size: 6rem;
   cursor: pointer;
   transition: all 1s;
 }
 
 @media (max-width: 500px) {
   .square {
-    font-size: 2.75rem;
+    font-size: 4.5rem;
   }
 }
 
