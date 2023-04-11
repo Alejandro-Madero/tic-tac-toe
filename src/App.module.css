@@ -25,7 +25,7 @@
 
 @media (max-width: 768px) {
   .game-container {
-    background-color: magenta;
+    /* background-color: magenta; */
     width: 80%;
   }
 
@@ -41,7 +41,7 @@
 @media (max-width: 500px) {
   .game-container {
     width: 90%;
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
   }
 
   .game-container h1 {

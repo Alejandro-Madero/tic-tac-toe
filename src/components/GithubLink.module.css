@@ -1,0 +1,14 @@
+.logo {
+  fill: #cccccc;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-40%, -40%) rotate(145deg);
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: translate(-15%, -15%) rotate(135deg);
+}

@@ -13,6 +13,7 @@ import WinnerModal from "./components/WinnerModal";
 import Overlay from "./components/UI/Overlay";
 import Button from "./components/UI/Button";
 import styles from "./App.module.css";
+import GithubLink from "./components/GithubLink";
 
 const App = () => {
   const [currentTurn, setCurrentTurn] = useState(TURNS.X);
@@ -65,35 +66,34 @@ const App = () => {
   const handleCloseModal = () => setShowModal(false);
 
   return (
-    <>
-      <main className={styles["game-container"]}>
-        <h1>Tic-Tac-Toe</h1>
-        <CurrentTurn turn={currentTurn} />
-        <section className={styles["board-container"]}>
-          {board.map((el, i) => {
-            return (
-              <Square
-                key={i}
-                index={i}
-                onClick={handleSquareClick}
-                isWinner={winningCombo}
-              >
-                {board[i] === "X" && <PlayerX />}
-                {board[i] === "O" && <PlayerO />}
-              </Square>
-            );
-          })}
-        </section>
-        {showModal && (
-          <Overlay onClick={handleCloseModal}>
-            <WinnerModal winner={winner || "="} onClick={handleCloseModal} />
-          </Overlay>
-        )}
-        <Button className={styles["start-again-btn"]} onClick={handleResetGame}>
-          Start Again
-        </Button>
-      </main>
-    </>
+    <main className={styles["game-container"]}>
+      <GithubLink />
+      <h1>Tic-Tac-Toe</h1>
+      <CurrentTurn turn={currentTurn} />
+      <section className={styles["board-container"]}>
+        {board.map((el, i) => {
+          return (
+            <Square
+              key={i}
+              index={i}
+              onClick={handleSquareClick}
+              isWinner={winningCombo}
+            >
+              {board[i] === "X" && <PlayerX />}
+              {board[i] === "O" && <PlayerO />}
+            </Square>
+          );
+        })}
+      </section>
+      {showModal && (
+        <Overlay onClick={handleCloseModal}>
+          <WinnerModal winner={winner || "="} onClick={handleCloseModal} />
+        </Overlay>
+      )}
+      <Button className={styles["start-again-btn"]} onClick={handleResetGame}>
+        Start Again
+      </Button>
+    </main>
   );
 };
 
