@@ -5,6 +5,7 @@ import {
   checkWinner,
   isGameFinished,
 } from "./utils/gameLogic";
+import CurrentTurn from "./components/CurrentTurn";
 import PlayerX from "./components/PlayerX";
 import PlayerO from "./components/PlayerO";
 import Square from "./components/Square";
@@ -19,6 +20,7 @@ const App = () => {
   const [winner, setWinner] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
   const [winningCombo, setWinningCombo] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const handleSquareClick = (index) => {
     // check if game finished or square is already filled
@@ -39,10 +41,13 @@ const App = () => {
       setWinner(currentTurn);
       setWinningCombo(isWinner);
       setGameFinished(true);
-      return;
+      return setShowModal(true);
     }
     //Check if game finished
-    if (isGameFinished(newBoard)) return setGameFinished(true);
+    if (isGameFinished(newBoard)) {
+      setGameFinished(true);
+      return setShowModal(true);
+    }
 
     // if no winner change turn
     currentTurn === TURNS.X ? setCurrentTurn(TURNS.O) : setCurrentTurn(TURNS.X);
@@ -54,12 +59,16 @@ const App = () => {
     setWinner(null);
     setGameFinished(false);
     setWinningCombo(null);
+    setShowModal(false);
   };
+
+  const handleCloseModal = () => setShowModal(false);
 
   return (
     <>
       <main className={styles["game-container"]}>
-        <h1>Tic Tac Toe</h1>
+        <h1>Tic-Tac-Toe</h1>
+        <CurrentTurn turn={currentTurn} />
         <section className={styles["board-container"]}>
           {board.map((el, i) => {
             return (
@@ -75,9 +84,9 @@ const App = () => {
             );
           })}
         </section>
-        {gameFinished && (
-          <Overlay>
-            <WinnerModal winner={winner || "="} />
+        {showModal && (
+          <Overlay onClick={handleCloseModal}>
+            <WinnerModal winner={winner || "="} onClick={handleCloseModal} />
           </Overlay>
         )}
         <Button className={styles["start-again-btn"]} onClick={handleResetGame}>

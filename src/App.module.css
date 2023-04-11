@@ -1,5 +1,6 @@
 .game-container {
   margin: 0 auto;
+  /* margin-top: 3rem; */
   width: 70%;
   max-width: 800px;
   display: flex;
@@ -8,8 +9,9 @@
 
 .game-container h1 {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 1.5rem;
   font-size: 4rem;
+  font-weight: 400;
 }
 
 .board-container {
@@ -21,23 +23,34 @@
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .game-container {
+    background-color: magenta;
+    width: 80%;
+  }
+
+  .game-container h1 {
+    font-size: 3rem;
+  }
+
+  .board-container {
+    width: 90%;
+  }
+}
+
 @media (max-width: 500px) {
   .game-container {
     width: 90%;
+    background-color: darkgreen;
+  }
+
+  .game-container h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
   }
 
   .board-container {
     width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .game-container {
-    width: 80%;
-  }
-
-  .board-container {
-    width: 90%;
   }
 }
 

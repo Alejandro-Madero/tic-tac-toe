@@ -83,3 +83,9 @@
     );
   }
 }
+
+@media (max-width: 500px) {
+  .o {
+    border: 7px solid #ccc;
+  }
+}

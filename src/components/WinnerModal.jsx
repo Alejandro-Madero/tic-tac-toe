@@ -10,7 +10,7 @@ const winningPlayer = new Map([
   ["=", "🤝"],
 ]);
 
-const WinnerModal = ({ winner }) => {
+const WinnerModal = ({ winner, onClick }) => {
   const headerMessage =
     winningPlayer.get(winner) === "🤝" ? "Empate" : "Ganador";
 
@@ -25,7 +25,9 @@ const WinnerModal = ({ winner }) => {
         </Square>
       </div>
       <footer className={styles["modal-footer"]}>
-        <Button className={styles["modal-btn"]}>Okay</Button>
+        <Button className={styles["modal-btn"]} onClick={onClick}>
+          Okay
+        </Button>
       </footer>
     </div>
   );

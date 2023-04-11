@@ -1,0 +1,27 @@
+.turn {
+  width: 70%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.container {
+  width: 40%;
+  max-width: 90px;
+  aspect-ratio: 1.1;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.active {
+  background-color: #ccc;
+  color: #333;
+}

@@ -29,6 +29,4 @@ export const checkWinner = (board, turn) => {
   return null;
 };
 
-export const isGameFinished = (board) => {
-  return board.every((el) => el !== null);
-};
+export const isGameFinished = (board) => board.every((el) => el !== null);
