@@ -1,9 +1,7 @@
 .square {
   position: relative;
   width: 100%;
-  /* height: 100px; */
   aspect-ratio: 1;
-  border-radius: 1px;
   border: 4px solid #ccc;
   display: grid;
   place-items: center;
@@ -33,7 +31,7 @@
 
 .is-winner {
   background-color: rgba(112, 112, 112, 1);
-  animation: 1s winner ease-in forwards;
+  animation: 0.5s winner ease-in forwards;
 }
 
 @keyframes winner {
@@ -41,6 +39,7 @@
     transform: scale(1);
   }
   50% {
+    border: none;
     transform: scale(1.1);
   }
   100% {

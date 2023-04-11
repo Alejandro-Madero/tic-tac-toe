@@ -1,12 +1,14 @@
 .game-container {
   margin: 0 auto;
-  width: 80%;
-  max-width: 1000px;
+  width: 70%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
 }
 
 .game-container h1 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   font-size: 4rem;
 }
 
@@ -14,8 +16,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  width: 80%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 500px;
   margin: 0 auto;
   /* gap: 0.3rem; */
 }
@@ -28,4 +30,21 @@
   .board-container {
     width: 100%;
   }
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    width: 80%;
+  }
+
+  .board-container {
+    width: 90%;
+  }
+}
+
+.start-again-btn {
+  box-sizing: border-box;
+  margin-top: 5rem;
+  align-self: center;
+  padding: 0.5rem;
 }

@@ -23,7 +23,7 @@ export const checkWinner = (board, turn) => {
 
     const isWinner = [pos1, pos2, pos3].every((el) => el === turn);
     if (!isWinner) continue;
-    return [true, combination];
+    return combination;
   }
 
   return false;

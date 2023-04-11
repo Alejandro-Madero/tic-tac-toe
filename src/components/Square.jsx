@@ -14,6 +14,7 @@ const squareBorders = new Map([
 
 const Square = ({ children, onClick, index, isWinner }) => {
   const winner = isWinner?.includes(index) ? "is-winner" : "";
+
   const handleClick = () => onClick(index);
   return (
     <div
