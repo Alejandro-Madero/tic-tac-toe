@@ -1,6 +1,6 @@
 .game-container {
   margin: 0 auto;
-  margin-top: 3rem;
+  padding-top: 3rem;
   width: 70%;
   max-width: 800px;
   display: flex;
@@ -44,8 +44,7 @@
 @media (max-width: 500px) {
   .game-container {
     width: 90%;
-    margin-top: 2rem;
-    /* background-color: darkgreen; */
+    padding-top: 2rem;
   }
 
   .game-container h1 {
