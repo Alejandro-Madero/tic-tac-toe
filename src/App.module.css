@@ -1,18 +1,11 @@
 .game-container {
   margin: 0 auto;
-  /* margin-top: 3rem; */
+  margin-top: 3rem;
   width: 70%;
   max-width: 800px;
   display: flex;
   flex-direction: column;
 }
-
-/* .game-container h1 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 4rem;
-  font-weight: 400;
-} */
 
 .board-container {
   display: grid;
@@ -21,6 +14,16 @@
   width: 70%;
   max-width: 500px;
   margin: 0 auto;
+}
+
+.start-again-btn {
+  align-self: center;
+  margin-top: 5rem;
+  padding: 0.5rem;
+  width: 50%;
+  max-width: 300px;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -41,6 +44,7 @@
 @media (max-width: 500px) {
   .game-container {
     width: 90%;
+    margin-top: 2rem;
     /* background-color: darkgreen; */
   }
 
@@ -52,10 +56,7 @@
   .board-container {
     width: 100%;
   }
-}
-
-.start-again-btn {
-  margin-top: 5rem;
-  align-self: center;
-  padding: 0.5rem;
+  .start-again-btn {
+    font-size: 1rem;
+  }
 }

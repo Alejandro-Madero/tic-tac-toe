@@ -75,7 +75,6 @@ const App = () => {
   return (
     <main className={styles["game-container"]}>
       <GithubLink />
-
       <CurrentTurn turn={currentTurn} />
       <section className={styles["board-container"]}>
         {board.map((el, i) => {

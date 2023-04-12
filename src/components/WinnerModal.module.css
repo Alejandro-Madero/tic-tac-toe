@@ -47,6 +47,10 @@
 .modal-btn {
   padding: 0.5rem;
   margin: 0.5rem 0 1rem 0;
+  width: 50%;
+  max-width: 300px;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -65,5 +69,9 @@
 
   .modal-square {
     width: 70%;
+  }
+
+  .modal-btn {
+    font-size: 1rem;
   }
 }

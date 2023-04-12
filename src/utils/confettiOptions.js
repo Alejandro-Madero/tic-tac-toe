@@ -18,6 +18,7 @@ export const confettiOptions = () => {
         origin: { y: 0.4 },
         disableForReducedMotion: true,
         scalar: 0.8,
+        resize: true,
       },
     ],
     [
@@ -30,6 +31,7 @@ export const confettiOptions = () => {
         origin: { y: 0.4 },
         disableForReducedMotion: true,
         scalar: 0.9,
+        resize: true,
       },
     ],
     [
@@ -41,6 +43,7 @@ export const confettiOptions = () => {
         ticks: 280,
         origin: { y: 0.4 },
         disableForReducedMotion: true,
+        resize: true,
       },
     ],
   ]);

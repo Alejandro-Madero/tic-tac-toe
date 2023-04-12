@@ -26,7 +26,7 @@ const WinnerModal = ({ winner, onClick }) => {
       </div>
       <footer className={styles["modal-footer"]}>
         <Button className={styles["modal-btn"]} onClick={onClick}>
-          Okay
+          Ok
         </Button>
       </footer>
     </div>
