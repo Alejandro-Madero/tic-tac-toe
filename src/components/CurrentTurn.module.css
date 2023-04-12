@@ -22,8 +22,8 @@
 }
 
 .active {
-  background-color: #ccc;
-  color: #333;
+  background-color: var(--color-gray-primary);
+  color: var(--background-color);
 }
 
 @media (max-width: 500px) {

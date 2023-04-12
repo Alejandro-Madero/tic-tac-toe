@@ -10,7 +10,7 @@
   width: 65%;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 10px solid #ccc;
+  border: 10px solid var(--color-gray-primary);
   animation: oAnimation 0.3s forwards linear;
 }
 
@@ -86,6 +86,6 @@
 
 @media (max-width: 500px) {
   .o {
-    border: 7px solid #ccc;
+    border: 7px solid var(--color-gray-primary);
   }
 }

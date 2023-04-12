@@ -1,18 +1,19 @@
 .modal {
   width: 50%;
   max-width: 600px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--background-dark-transparent);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid var(--color-gray-accent);
   justify-content: space-between;
+  /* animation: showModal 0.3s forwards ease-in; */
 }
 
 .modal header {
   padding: 1rem;
-  background-color: rgba(230, 230, 230, 0.85);
-  color: #333;
+  background-color: var(--color-gray-primary);
+  color: var(--background-color);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -75,3 +76,16 @@
     font-size: 1rem;
   }
 }
+/* 
+@keyframes showModal {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+} */

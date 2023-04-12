@@ -5,13 +5,18 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --background-color: #242424;
+  --background-dark-transparent: rgba(0, 0, 0, 0.8);
+  --background-dark: rgba(0, 0, 0, 0.9);
+  --color-gray-primary: #ccc;
+  --color-gray-accent: #747272;
+  --color-white: #fff;
 }
 
 *,
@@ -39,6 +44,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  background-color: var(--background-color);
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }

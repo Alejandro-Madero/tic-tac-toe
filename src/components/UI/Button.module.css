@@ -1,6 +1,6 @@
 .btn {
-  background-color: #ccc;
-  color: #222;
+  background-color: var(--color-gray-primary);
+  color: var(--background-color);
   text-align: center;
   border-radius: 5px;
   border: none;
@@ -9,7 +9,7 @@
 }
 
 .btn:hover {
-  background-color: #333;
-  color: #fff;
-  outline: 2px solid #ccc;
+  background-color: var(--background-color);
+  color: var(--color-white);
+  outline: 2px solid var(--color-gray-primary);
 }

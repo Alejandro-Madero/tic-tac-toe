@@ -1,5 +1,5 @@
 .logo {
-  fill: #cccccc;
+  fill: var(--color-gray-primary);
   position: absolute;
   left: 0;
   top: 0;
