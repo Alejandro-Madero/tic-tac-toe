@@ -49,6 +49,7 @@
   }
   .game-container {
     width: 80%;
+    padding-top: 0;
   }
 
   .game-container h1 {
@@ -63,7 +64,7 @@
 @media (max-width: 500px) {
   .game-container {
     width: 90%;
-    padding-top: 2rem;
+    padding-top: 0rem;
   }
 
   .game-container h1 {
@@ -76,5 +77,6 @@
   }
   .start-again-btn {
     font-size: 1rem;
+    margin-top: 3rem;
   }
 }
