@@ -1,13 +1,20 @@
+.app-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .game-container {
   margin: 0 auto;
+  margin-left: 5rem;
   padding-top: 3rem;
   width: 70%;
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
 }
 
-.board-container {
+.board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
@@ -26,9 +33,21 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .app-container {
+    width: 90%;
+  }
   .game-container {
-    /* background-color: magenta; */
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .game-container {
     width: 80%;
   }
 
@@ -36,7 +55,7 @@
     font-size: 3rem;
   }
 
-  .board-container {
+  .board {
     width: 90%;
   }
 }
@@ -52,7 +71,7 @@
     margin-bottom: 3rem;
   }
 
-  .board-container {
+  .board {
     width: 100%;
   }
   .start-again-btn {

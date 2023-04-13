@@ -14,12 +14,16 @@ import Square from "./components/Square";
 import WinnerModal from "./components/WinnerModal";
 import Overlay from "./components/UI/Overlay";
 import Button from "./components/UI/Button";
-import styles from "./App.module.css";
 import GithubLink from "./components/GithubLink";
+import History from "./components/History";
+import { compareBoard } from "./utils/compareBoard";
+import styles from "./App.module.css";
 
 const App = () => {
   const [currentTurn, setCurrentTurn] = useState(TURNS.X);
+  const [currentMove, setCurrentMove] = useState(0);
   const [board, setBoard] = useState(initialBoard);
+  const [history, setHistory] = useState([initialBoard]);
   const [winner, setWinner] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
   const [winningCombo, setWinningCombo] = useState(null);
@@ -33,9 +37,14 @@ const App = () => {
     const newBoard = [...board];
     newBoard[index] = currentTurn;
 
-    //set winner and show modal
-    setBoard(newBoard);
+    //Check if board displayed is the current board (not history)
 
+    if (!compareBoard(board, history.at(-1))) return;
+
+    //set new board & update history
+    setBoard(newBoard);
+    setHistory((prevHistory) => [...prevHistory, newBoard]);
+    setCurrentMove(history.length);
     //Check if winner
     const isWinner = checkWinner(newBoard, currentTurn);
 
@@ -63,6 +72,8 @@ const App = () => {
     setGameFinished(false);
     setWinningCombo(null);
     setShowModal(false);
+    setHistory([initialBoard]);
+    setCurrentMove(0);
   };
 
   const handleCloseModal = () => setShowModal(false);
@@ -72,34 +83,53 @@ const App = () => {
     confetti(confettiOptions());
   }, [winner]);
 
+  const handleShowHistory = (index) => {
+    console.log(index);
+    setCurrentMove(index);
+    setBoard(history[index]);
+  };
+
   return (
-    <main className={styles["game-container"]}>
-      <GithubLink />
-      <CurrentTurn turn={currentTurn} />
-      <section className={styles["board-container"]}>
-        {board.map((el, i) => {
-          return (
-            <Square
-              key={i}
-              index={i}
-              onClick={handleSquareClick}
-              isWinner={winningCombo}
-            >
-              {board[i] === "X" && <PlayerX />}
-              {board[i] === "O" && <PlayerO />}
-            </Square>
-          );
-        })}
-      </section>
+    <>
+      <main className={styles["app-container"]}>
+        <GithubLink />
+        <article className={styles["game-container"]}>
+          <CurrentTurn turn={currentTurn} />
+          <section className={styles.board}>
+            {board.map((el, i) => {
+              return (
+                <Square
+                  key={i}
+                  index={i}
+                  onClick={handleSquareClick}
+                  isWinner={winningCombo}
+                >
+                  {board[i] === "X" && <PlayerX />}
+                  {board[i] === "O" && <PlayerO />}
+                </Square>
+              );
+            })}
+          </section>
+
+          <Button
+            className={styles["start-again-btn"]}
+            onClick={handleResetGame}
+          >
+            Start Again
+          </Button>
+        </article>
+        <History
+          history={history}
+          onShowHistory={handleShowHistory}
+          move={currentMove}
+        />
+      </main>
       {showModal && (
         <Overlay onClick={handleCloseModal}>
           <WinnerModal winner={winner || "="} onClick={handleCloseModal} />
         </Overlay>
       )}
-      <Button className={styles["start-again-btn"]} onClick={handleResetGame}>
-        Start Again
-      </Button>
-    </main>
+    </>
   );
 };
 

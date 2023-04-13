@@ -2,18 +2,25 @@ import styles from "./CurrentTurn.module.css";
 
 const currentTurn = ({ turn }) => {
   return (
-    <div className={styles.turn}>
-      <div
-        className={`${styles.container} ${turn === "X" ? styles.active : ""}`}
-      >
-        <p>✕</p>
+    <>
+      <h2 className={styles.title}>Turn</h2>
+      <div className={styles.container}>
+        <div
+          className={`${styles["turn-container"]} ${
+            turn === "X" ? styles.active : ""
+          }`}
+        >
+          <p>✕</p>
+        </div>
+        <div
+          className={`${styles["turn-container"]} ${
+            turn === "O" ? styles.active : ""
+          }`}
+        >
+          <p>◯</p>
+        </div>
       </div>
-      <div
-        className={`${styles.container} ${turn === "O" ? styles.active : ""}`}
-      >
-        <p>◯</p>
-      </div>
-    </div>
+    </>
   );
 };
 

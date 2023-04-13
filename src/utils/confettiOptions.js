@@ -24,7 +24,7 @@ export const confettiOptions = () => {
     [
       "medium",
       {
-        particleCount: 100,
+        particleCount: 120,
         spread: 120,
         gravity: 0.8,
         ticks: 280,
@@ -37,7 +37,7 @@ export const confettiOptions = () => {
     [
       "large",
       {
-        particleCount: 120,
+        particleCount: 140,
         spread: 180,
         gravity: 0.8,
         ticks: 280,
