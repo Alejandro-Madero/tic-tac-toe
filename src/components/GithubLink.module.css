@@ -3,6 +3,8 @@
   position: absolute;
   left: 0;
   top: 0;
+  width: 128px;
+  height: 128px;
   transform: translate(-40%, -40%) rotate(145deg);
   overflow: hidden;
   transition: all 0.5s;
@@ -15,12 +17,20 @@
 
 @media (max-width: 768px) {
   .logo {
-    width: 80px;
-    height: 80px;
-    transform: translate(-20%, -12%) rotate(145deg);
+    transform: translate(-30%, -28%) rotate(145deg) scale(0.6);
   }
 
   .logo:hover {
-    transform: translate(-20%, -12%) scale(1.1) rotate(145deg);
+    transform: translate(-30%, -28%) rotate(145deg) scale(0.7);
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    transform: translate(-35%, -32%) rotate(145deg) scale(0.5);
+  }
+
+  .logo:hover {
+    transform: translate(-35%, -32%) rotate(145deg) scale(0.6);
   }
 }

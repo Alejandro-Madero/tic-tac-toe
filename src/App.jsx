@@ -78,8 +78,8 @@ const App = () => {
     setCurrentMove(0);
   };
 
-  const handleCloseModal = () => setShowModal(false);
   const handleResetScore = () => setResetScore(!resetScore);
+  const handleCloseModal = () => setShowModal(false);
 
   useEffect(() => {
     if (!winner) return;

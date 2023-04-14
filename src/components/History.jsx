@@ -9,10 +9,9 @@ const History = ({ children, history, onShowHistory, move }) => {
       <div className={styles["btns-container"]}>
         {history.map((board, i) => {
           return (
-            <div className={styles.move}>
+            <div key={i} className={styles.move}>
               <span>{i}.</span>
               <Button
-                key={i}
                 onClick={() => handleClick(i)}
                 className={`${styles.btn} ${i === move ? styles.selected : ""}`}
               >
