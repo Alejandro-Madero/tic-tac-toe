@@ -1,6 +1,7 @@
 .title {
   font-size: 1.75rem;
   text-align: center;
+  letter-spacing: 0.2rem;
   margin-bottom: 0.5rem;
   color: var(--color-gray-primary);
   text-transform: uppercase;
@@ -9,7 +10,7 @@
   width: 70%;
   max-width: 500px;
   margin: 0 auto;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -29,8 +30,7 @@
 }
 
 .active {
-  background-color: var(--color-gray-primary);
-  color: var(--background-color);
+  box-shadow: 0 0px 4px rgba(204, 204, 204);
 }
 
 @media (max-width: 768px) {

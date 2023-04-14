@@ -17,6 +17,7 @@ import Button from "./components/UI/Button";
 import GithubLink from "./components/GithubLink";
 import History from "./components/History";
 import { compareBoard } from "./utils/compareBoard";
+import PlayerScore from "./components/PlayerScore";
 import styles from "./App.module.css";
 
 const App = () => {
@@ -95,6 +96,7 @@ const App = () => {
         <GithubLink />
         <article className={styles["game-container"]}>
           <CurrentTurn turn={currentTurn} />
+          <PlayerScore winner={winner} />
           <section className={styles.board}>
             {board.map((el, i) => {
               return (
