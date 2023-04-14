@@ -23,15 +23,22 @@
   margin: 0 auto;
 }
 
-.start-again-btn {
+.btns-container {
+  align-self: center;
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.start-reset-btn {
   align-self: center;
   margin-top: 5rem;
-  padding: 0.5rem;
+  padding: 0.25rem;
   width: 50%;
-  max-width: 300px;
+  max-width: 250px;
   font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.1rem;
 }
 
 @media (max-width: 1000px) {
@@ -60,6 +67,12 @@
   .board {
     width: 90%;
   }
+  .btns-container {
+    width: 90%;
+  }
+  .start-reset-btn {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -74,6 +87,9 @@
   }
 
   .board {
+    width: 100%;
+  }
+  .btns-container {
     width: 100%;
   }
   .start-again-btn {

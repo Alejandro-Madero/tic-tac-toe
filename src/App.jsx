@@ -29,6 +29,7 @@ const App = () => {
   const [gameFinished, setGameFinished] = useState(false);
   const [winningCombo, setWinningCombo] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [resetScore, setResetScore] = useState(false);
 
   const handleSquareClick = (index) => {
     // check if game finished or square is already filled
@@ -78,6 +79,7 @@ const App = () => {
   };
 
   const handleCloseModal = () => setShowModal(false);
+  const handleResetScore = () => setResetScore(!resetScore);
 
   useEffect(() => {
     if (!winner) return;
@@ -85,7 +87,6 @@ const App = () => {
   }, [winner]);
 
   const handleShowHistory = (index) => {
-    console.log(index);
     setCurrentMove(index);
     setBoard(history[index]);
   };
@@ -96,7 +97,7 @@ const App = () => {
         <GithubLink />
         <article className={styles["game-container"]}>
           <CurrentTurn turn={currentTurn} />
-          <PlayerScore winner={winner} />
+          <PlayerScore winner={winner} resetScore={resetScore} />
           <section className={styles.board}>
             {board.map((el, i) => {
               return (
@@ -112,13 +113,20 @@ const App = () => {
               );
             })}
           </section>
-
-          <Button
-            className={styles["start-again-btn"]}
-            onClick={handleResetGame}
-          >
-            Play Again
-          </Button>
+          <div className={styles["btns-container"]}>
+            <Button
+              className={styles["start-reset-btn"]}
+              onClick={handleResetGame}
+            >
+              Play Again
+            </Button>
+            <Button
+              className={styles["start-reset-btn"]}
+              onClick={handleResetScore}
+            >
+              Reset Scores
+            </Button>
+          </div>
         </article>
         <History
           history={history}
