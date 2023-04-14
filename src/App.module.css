@@ -33,10 +33,10 @@
 .start-reset-btn {
   align-self: center;
   margin-top: 5rem;
-  padding: 0.25rem;
+  padding: 0.5rem;
   width: 50%;
   max-width: 250px;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
 }
