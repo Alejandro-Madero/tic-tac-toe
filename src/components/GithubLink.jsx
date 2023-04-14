@@ -6,6 +6,7 @@ const GithubLink = () => {
       href="https://github.com/Alejandro-Madero/tic-tac-toe"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Visit the proyect's Github repository"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

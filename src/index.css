@@ -12,8 +12,8 @@
   -webkit-text-size-adjust: 100%;
 
   --background-color: #242424;
-  --background-dark-transparent: rgba(0, 0, 0, 0.8);
   --background-dark: rgba(0, 0, 0, 0.9);
+  --background-dark-transparent: rgba(0, 0, 0, 0.8);
   --color-gray-primary: #ccc;
   --color-gray-accent: #747272;
   --color-white: #fff;
