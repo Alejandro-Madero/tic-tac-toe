@@ -8,9 +8,7 @@ import {
 } from "./utils/gameLogic";
 import { confettiOptions } from "./utils/confettiOptions";
 import CurrentTurn from "./components/CurrentTurn";
-import PlayerX from "./components/PlayerX";
-import PlayerO from "./components/PlayerO";
-import Square from "./components/Square";
+import Board from "./components/Board";
 import WinnerModal from "./components/WinnerModal";
 import Overlay from "./components/UI/Overlay";
 import Button from "./components/UI/Button";
@@ -98,21 +96,11 @@ const App = () => {
         <article className={styles["game-container"]}>
           <CurrentTurn turn={currentTurn} />
           <PlayerScore winner={winner} resetScore={resetScore} />
-          <section className={styles.board}>
-            {board.map((el, i) => {
-              return (
-                <Square
-                  key={i}
-                  index={i}
-                  onClick={handleSquareClick}
-                  isWinner={winningCombo}
-                >
-                  {board[i] === "X" && <PlayerX />}
-                  {board[i] === "O" && <PlayerO />}
-                </Square>
-              );
-            })}
-          </section>
+          <Board
+            board={board}
+            isWinner={winningCombo}
+            onClick={handleSquareClick}
+          />
           <div className={styles["btns-container"]}>
             <Button
               className={styles["play-reset-btn"]}
