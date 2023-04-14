@@ -8,7 +8,15 @@
   cursor: pointer;
 }
 
-.btn:hover {
+@media (hover: hover) {
+  .btn:hover {
+    background-color: var(--background-color);
+    color: var(--color-white);
+    outline: 2px solid var(--color-gray-primary);
+  }
+}
+
+.btn.mobile-hover {
   background-color: var(--background-color);
   color: var(--color-white);
   outline: 2px solid var(--color-gray-primary);
