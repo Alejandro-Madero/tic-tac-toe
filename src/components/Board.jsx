@@ -6,7 +6,7 @@ import styles from "./Board.module.css";
 const Board = ({ board, isWinner, onClick }) => {
   return (
     <section className={styles.board}>
-      {board.map((el, i) => {
+      {board.map((_, i) => {
         return (
           <Square key={i} index={i} onClick={onClick} isWinner={isWinner}>
             {board[i] === "X" && <PlayerX />}

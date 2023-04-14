@@ -30,38 +30,30 @@ const App = () => {
   const [resetScore, setResetScore] = useState(false);
 
   const handleSquareClick = (index) => {
-    // check if game finished or square is already filled
     if (board[index] || gameFinished) return;
 
-    // Get new board
     const newBoard = [...board];
     newBoard[index] = currentTurn;
 
-    //Check if board displayed is the current board (not history)
-
     if (!compareBoard(board, history.at(-1))) return;
 
-    //set new board & update history
     setBoard(newBoard);
     setHistory((prevHistory) => [...prevHistory, newBoard]);
     setCurrentMove(history.length);
-    //Check if winner
+
     const isWinner = checkWinner(newBoard, currentTurn);
 
-    //Check if
     if (isWinner) {
       setWinner(currentTurn);
       setWinningCombo(isWinner);
       setGameFinished(true);
       return setShowModal(true);
     }
-    //Check if game finished
+
     if (isGameFinished(newBoard)) {
       setGameFinished(true);
       return setShowModal(true);
     }
-
-    // if no winner change turn
     currentTurn === TURNS.X ? setCurrentTurn(TURNS.O) : setCurrentTurn(TURNS.X);
   };
 
@@ -78,16 +70,15 @@ const App = () => {
 
   const handleResetScore = () => setResetScore(!resetScore);
   const handleCloseModal = () => setShowModal(false);
+  const handleShowHistory = (index) => {
+    setCurrentMove(index);
+    setBoard(history[index]);
+  };
 
   useEffect(() => {
     if (!winner) return;
     confetti(confettiOptions());
   }, [winner]);
-
-  const handleShowHistory = (index) => {
-    setCurrentMove(index);
-    setBoard(history[index]);
-  };
 
   return (
     <>
