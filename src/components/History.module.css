@@ -4,7 +4,6 @@
   width: 20%;
   max-width: 500px;
   gap: 1rem;
-  /* background-color: orangered; */
   align-items: center;
   justify-content: center;
   margin-right: 5rem;
@@ -15,7 +14,6 @@
   flex-direction: column;
   min-height: 350px;
   gap: 0.35rem;
-  /* background-color: blueviolet; */
   width: 100%;
 }
 
@@ -23,7 +21,6 @@
   display: flex;
   gap: 1rem;
   transition: all 1s;
-  /* background-color: orangered; */
 }
 
 .move span {
@@ -36,7 +33,6 @@
   max-width: 200px;
   font-weight: 600;
   font-size: 0.9rem;
-  /* padding: 0 0.5rem 0 0.5rem; */
 }
 .selected {
   background-color: var(--background-color);
@@ -83,6 +79,5 @@
 
   .move {
     gap: 0.5rem;
-    /* background-color: orangered; */
   }
 }

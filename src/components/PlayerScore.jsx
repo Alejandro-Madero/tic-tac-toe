@@ -19,11 +19,11 @@ const PlayerScore = ({ winner }) => {
   return (
     <section class={styles.score}>
       <div className={styles["player-container"]}>
-        <h3>Player X:</h3>
+        <h3>Player ✕:</h3>
         <span>{scoreX}</span>
       </div>
       <div className={styles["player-container"]}>
-        <h3>Player O:</h3>
+        <h3>Player ◯:</h3>
         <span>{scoreO}</span>
       </div>
     </section>

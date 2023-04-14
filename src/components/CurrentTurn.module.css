@@ -23,7 +23,7 @@
   width: 40%;
   max-width: 80px;
   aspect-ratio: 1.1;
-  border-radius: 15px;
+  border-radius: var(--br-5);
   display: grid;
   place-items: center;
   transition: background-color 0.3s, color 0.3s;

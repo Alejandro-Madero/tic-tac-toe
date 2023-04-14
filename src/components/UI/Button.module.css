@@ -2,7 +2,7 @@
   background-color: var(--color-gray-primary);
   color: var(--background-color);
   text-align: center;
-  border-radius: 5px;
+  border-radius: var(--br-5);
   border: none;
   text-transform: uppercase;
   cursor: pointer;

@@ -117,7 +117,7 @@ const App = () => {
             className={styles["start-again-btn"]}
             onClick={handleResetGame}
           >
-            Start Again
+            Play Again
           </Button>
         </article>
         <History

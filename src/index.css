@@ -17,6 +17,10 @@
   --color-gray-primary: #ccc;
   --color-gray-accent: #747272;
   --color-white: #fff;
+  --br-5: 5px;
+  --br-10: 10px;
+  --br-15: 15px;
+  --br-circle: 50%;
 }
 
 *,

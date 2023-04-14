@@ -9,7 +9,7 @@
 .o {
   width: 65%;
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: var(--br-circle);
   border: 10px solid var(--color-gray-primary);
   animation: oAnimation 0.3s forwards linear;
 }

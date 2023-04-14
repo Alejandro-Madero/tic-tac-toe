@@ -8,6 +8,7 @@
   width: 70%;
   max-width: 500px;
   box-shadow: 0 0px 4px rgba(204, 204, 204);
+  border-radius: var(--br-5);
 }
 
 .player-container {
