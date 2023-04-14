@@ -115,13 +115,13 @@ const App = () => {
           </section>
           <div className={styles["btns-container"]}>
             <Button
-              className={styles["start-reset-btn"]}
+              className={styles["play-reset-btn"]}
               onClick={handleResetGame}
             >
               Play Again
             </Button>
             <Button
-              className={styles["start-reset-btn"]}
+              className={styles["play-reset-btn"]}
               onClick={handleResetScore}
             >
               Reset Scores

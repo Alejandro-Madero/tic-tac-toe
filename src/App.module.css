@@ -30,7 +30,7 @@
   justify-content: center;
   gap: 0.5rem;
 }
-.start-reset-btn {
+.play-reset-btn {
   align-self: center;
   margin-top: 5rem;
   padding: 0.5rem;
@@ -70,7 +70,7 @@
   .btns-container {
     width: 90%;
   }
-  .start-reset-btn {
+  .play-reset-btn {
     font-size: 1rem;
   }
 }
@@ -92,7 +92,7 @@
   .btns-container {
     width: 100%;
   }
-  .start-again-btn {
+  .play-reset-btn {
     font-size: 1rem;
     margin-top: 3rem;
   }
