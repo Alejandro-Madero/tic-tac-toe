@@ -1,7 +1,7 @@
 .x-left {
   position: absolute;
   width: 70%;
-  height: 10px;
+  height: 8px;
   background-color: var(--color-gray-primary);
   transform: rotate(45deg);
   animation: discoverXLeft 0.3s forwards linear;
@@ -10,7 +10,7 @@
 .x-right {
   position: absolute;
   width: 70%;
-  height: 10px;
+  height: 8px;
   background-color: var(--color-gray-primary);
   transform: rotate(-45deg);
   animation: discoverXRight 0.3s forwards linear;

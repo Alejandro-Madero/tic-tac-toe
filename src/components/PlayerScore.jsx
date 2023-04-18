@@ -22,7 +22,7 @@ const PlayerScore = ({ winner, resetScore }) => {
   }, [resetScore]);
 
   return (
-    <section class={styles.score}>
+    <section className={styles.score}>
       <div className={styles["player-container"]}>
         <h3>Player ✕:</h3>
         <span>{playerXScore}</span>

@@ -1,10 +1,12 @@
+import { createPortal } from "react-dom";
 import styles from "./Overlay.module.css";
 
 const Overlay = ({ children, onClick }) => {
-  return (
+  return createPortal(
     <div className={styles.overlay} onClick={onClick}>
       {children}
-    </div>
+    </div>,
+    document.body
   );
 };
 

@@ -4,8 +4,7 @@
   background-color: var(--background-dark-transparent);
   border-radius: var(--br-15);
   display: flex;
-  flex-direction: column;
-  /* border: 2px solid var(--color-gray-accent); */
+  flex-direction: column;  
   justify-content: space-between;
   box-shadow: 0 0px 4px rgba(204, 204, 204);
 }

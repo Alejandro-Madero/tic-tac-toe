@@ -17,6 +17,7 @@ import History from "./components/History";
 import { compareBoard } from "./utils/compareBoard";
 import PlayerScore from "./components/PlayerScore";
 import styles from "./App.module.css";
+import { createPortal } from "react-dom";
 
 const App = () => {
   const [currentTurn, setCurrentTurn] = useState(TURNS.X);
