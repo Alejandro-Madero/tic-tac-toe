@@ -11,8 +11,7 @@ const winningPlayer = new Map([
 ]);
 
 const WinnerModal = ({ winner, onClick }) => {
-  const headerMessage =
-    winningPlayer.get(winner) === "🤝" ? "Empate" : "Ganador";
+  const headerMessage = winningPlayer.get(winner) === "🤝" ? "Draw" : "Winner!";
 
   return (
     <div className={styles.modal}>
