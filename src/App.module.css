@@ -1,6 +1,6 @@
 .app-container {
   display: flex;
-  width: var(--w-90);
+  width: var(--w-80);
   margin: 0 auto;
   /* height: 90%; */
 }
@@ -31,6 +31,12 @@
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
+}
+
+@media (max-width: 1200px) {
+  .app-container {
+    width: var(--w-90);
+  }
 }
 
 @media (max-width: 1000px) {
