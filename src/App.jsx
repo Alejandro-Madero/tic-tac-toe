@@ -7,6 +7,7 @@ import {
   isGameFinished,
 } from "./utils/gameLogic";
 import { confettiOptions } from "./utils/confettiOptions";
+import { compareBoard } from "./utils/compareBoard";
 import CurrentTurn from "./components/CurrentTurn";
 import Board from "./components/Board";
 import WinnerModal from "./components/WinnerModal";
@@ -14,10 +15,8 @@ import Overlay from "./components/UI/Overlay";
 import Button from "./components/UI/Button";
 import GithubLink from "./components/GithubLink";
 import History from "./components/History";
-import { compareBoard } from "./utils/compareBoard";
 import PlayerScore from "./components/PlayerScore";
 import styles from "./App.module.css";
-import { createPortal } from "react-dom";
 
 const App = () => {
   const [currentTurn, setCurrentTurn] = useState(TURNS.X);
