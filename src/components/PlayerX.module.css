@@ -18,7 +18,7 @@
 
 @keyframes discoverXLeft {
   0% {
-    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); /* x-y*/
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); 
   }
   50%,
   100% {
